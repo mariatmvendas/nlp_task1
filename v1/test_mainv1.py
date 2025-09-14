@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
-from main import app
+from mainv1 import app_v1
 
-client = TestClient(app)
+client = TestClient(app_v1)
 
 def test_positive_sentiment():
     response = client.post("/v1/sentiment", json={"text": "Det var en god lærer."})
